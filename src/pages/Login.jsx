@@ -51,8 +51,10 @@ const Login = () => {
             <div className="mb-3">
               <img src={novaLogo} alt="Nova Logo" className="w-28 h-16 object-contain" />
             </div>
-            <h2 className="text-3xl font-extrabold text-[#1a2a33] mb-1 text-center w-full">DASH VP ENGENHARIA</h2>
-            <p className="text-[#4a5a6a] text-sm">Welcome back! Please login to your account.</p>
+            <h2 className="text-2xl font-extrabold text-[#1a2a33] mb-1 text-center w-full">DASH VP ENGENHARIA</h2>
+            <div className="text-[13px] mt-1 mb-1" style={{ color: '#D6A647', fontFamily: 'Rajdhani, Orbitron, Titillium Web, Exo 2, Inter, sans-serif', textAlign: 'center', width: '100%', fontStyle: 'italic' }}>
+              Excelência técnica e compromisso: construindo resultados sólidos para quem entende de posto.
+            </div>
           </div>
           {error && <div className="mb-4 text-red-400 text-sm w-full text-center">{error}</div>}
           <div className="mb-4 w-full">
@@ -103,9 +105,6 @@ const Login = () => {
           >
             Login
           </button>
-          <div className="mt-2 text-[13px]" style={{ color: '#999999', fontFamily: 'Inter, sans-serif', textAlign: 'center', width: '100%' }}>
-            Excelência técnica e compromisso: construindo resultados sólidos para quem entende de posto.
-          </div>
         </form>
       </div>
       {/* Border Line and Right Background for Desktop */}
