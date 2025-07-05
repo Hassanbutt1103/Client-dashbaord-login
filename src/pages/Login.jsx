@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import novaLogo from '../assets/Nova Logo VP.png';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -35,31 +36,31 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row">
+    <div className="min-h-screen flex flex-col md:flex-row" style={{ backgroundColor: '#1a2a33' }}>
       {/* Mobile: Full background image, card overlay */}
       <div className="md:hidden fixed inset-0 z-0" style={{
-        backgroundImage: `linear-gradient(rgba(20, 20, 40, 0.7), rgba(20, 20, 40, 0.7)), url('/372748-PC42NW-151.jpg')`,
+        backgroundImage: `linear-gradient(rgba(26, 42, 51, 0.85), rgba(26, 42, 51, 0.85)), url('/372748-PC42NW-151.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '100vw',
         height: '100vh',
       }} />
-      <div className="w-full md:w-1/2 flex items-center justify-center bg-black md:static fixed inset-0 z-10">
-        <form onSubmit={handleSubmit} className="backdrop-blur-xl bg-black/20 md:bg-black/90 p-10 rounded-2xl shadow-2xl shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] w-full max-w-md flex flex-col items-center m-8">
+      <div className="w-full md:w-1/2 flex items-center justify-center md:static fixed inset-0 z-10" style={{ backgroundColor: '#1a2a33' }}>
+        <form onSubmit={handleSubmit} className="backdrop-blur-xl bg-white/70 md:bg-white/80 p-8 md:p-12 rounded-2xl shadow-2xl w-full max-w-md flex flex-col items-center m-4 md:m-8 border border-gray-200">
           <div className="flex flex-col items-center mb-8">
-            <div className="bg-gray-800 rounded-full p-4 mb-3 shadow-md">
-              <svg className="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            <div className="mb-3">
+              <img src={novaLogo} alt="Nova Logo" className="w-28 h-16 object-contain" />
             </div>
-            <h2 className="text-3xl font-extrabold text-white mb-1 text-center w-full">Thefni's Dashboard</h2>
-            <p className="text-gray-300 text-sm">Welcome back! Please login to your account.</p>
+            <h2 className="text-3xl font-extrabold text-[#1a2a33] mb-1 text-center w-full">DASH VP ENGENHARIA</h2>
+            <p className="text-[#4a5a6a] text-sm">Welcome back! Please login to your account.</p>
           </div>
           {error && <div className="mb-4 text-red-400 text-sm w-full text-center">{error}</div>}
           <div className="mb-4 w-full">
-            <label className="block mb-1 font-semibold text-gray-200" htmlFor="email">Email</label>
+            <label className="block mb-1 font-semibold text-[#1a2a33]" htmlFor="email">Email</label>
             <input
               id="email"
               type="email"
-              className="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition placeholder-gray-400"
+              className="w-full px-4 py-2 border border-gray-300 bg-[#f7f9fa] text-[#1a2a33] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1a2a33] transition placeholder-gray-400"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               autoComplete="email"
@@ -67,11 +68,11 @@ const Login = () => {
             />
           </div>
           <div className="mb-4 w-full">
-            <label className="block mb-1 font-semibold text-gray-200" htmlFor="password">Password</label>
+            <label className="block mb-1 font-semibold text-[#1a2a33]" htmlFor="password">Password</label>
             <input
               id="password"
               type="password"
-              className="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition placeholder-gray-400"
+              className="w-full px-4 py-2 border border-gray-300 bg-[#f7f9fa] text-[#1a2a33] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1a2a33] transition placeholder-gray-400"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               autoComplete="current-password"
@@ -79,26 +80,32 @@ const Login = () => {
             />
           </div>
           <div className="mb-6 w-full">
-            <label className="block mb-1 font-semibold text-gray-200" htmlFor="userType">User Type</label>
+            <label className="block mb-1 font-semibold text-[#1a2a33]" htmlFor="userType">User Type</label>
             <select
               id="userType"
-              className="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full px-4 py-2 border border-gray-300 bg-[#f7f9fa] text-[#1a2a33] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1a2a33] transition"
               value={userType}
               onChange={(e) => setUserType(e.target.value)}
             >
               <option value="">Select user type</option>
               <option value="Admin">Admin</option>
-              <option value="Manager">Manager</option>
-              <option value="Sector">Sector</option>
+              <option value="Gerente">Gerente</option>
+              <option value="Financeiro">Financeiro</option>
+              <option value="Engenharia">Engenharia</option>
+              <option value="RH">RH</option>
+              <option value="Comercial">Comercial</option>
+              <option value="Compras">Compras</option>
             </select>
           </div>
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2.5 rounded-lg font-semibold shadow-md hover:from-purple-700 hover:to-blue-700 transition-all text-lg mb-2"
+            className="w-full bg-[#1a2a33] text-white py-2.5 rounded-lg font-semibold shadow-md transition-all text-lg mb-2 transform hover:scale-105 hover:shadow-xl active:scale-95 focus:outline-none"
           >
             Login
           </button>
-          <div className="text-gray-500 text-xs mt-4">&reg;2025 CNTL C&amp;V</div>
+          <div className="mt-2 text-[13px]" style={{ color: '#999999', fontFamily: 'sans-serif', textAlign: 'center', width: '100%' }}>
+            Excelência técnica e compromisso: construindo resultados sólidos para quem entende de posto.
+          </div>
         </form>
       </div>
       {/* Border Line and Right Background for Desktop */}
@@ -107,7 +114,7 @@ const Login = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(20, 20, 40, 0.7), rgba(20, 20, 40, 0.7)), url('/372748-PC42NW-151.jpg')`,
+            backgroundImage: `linear-gradient(rgba(26, 42, 51, 0.85), rgba(26, 42, 51, 0.85)), url('/372748-PC42NW-151.jpg')`,
             backgroundSize: '110%',
             backgroundPosition: 'center',
             width: '100%',

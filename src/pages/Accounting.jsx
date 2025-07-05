@@ -8,7 +8,7 @@ const stats = [
 ];
 
 const Accounting = () => (
-  <div className="min-h-screen bg-black">
+  <div className="min-h-screen" style={{ backgroundColor: '#1a2a33' }}>
     <div className="max-w-5xl mx-auto p-6">
       <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 mb-8 flex flex-col items-center text-center border border-white/20">
         <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-2 drop-shadow-lg">Accounting Dashboard</h1>
