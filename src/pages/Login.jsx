@@ -36,7 +36,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row" style={{ backgroundColor: '#1a2a33' }}>
+    <div className="min-h-screen flex flex-col md:flex-row" style={{ backgroundColor: '#1a2a33', fontFamily: 'Inter, sans-serif' }}>
       {/* Mobile: Full background image, card overlay */}
       <div className="md:hidden fixed inset-0 z-0" style={{
         backgroundImage: `linear-gradient(rgba(26, 42, 51, 0.85), rgba(26, 42, 51, 0.85)), url('/372748-PC42NW-151.jpg')`,
@@ -103,7 +103,7 @@ const Login = () => {
           >
             Login
           </button>
-          <div className="mt-2 text-[13px]" style={{ color: '#999999', fontFamily: 'sans-serif', textAlign: 'center', width: '100%' }}>
+          <div className="mt-2 text-[13px]" style={{ color: '#999999', fontFamily: 'Inter, sans-serif', textAlign: 'center', width: '100%' }}>
             Excelência técnica e compromisso: construindo resultados sólidos para quem entende de posto.
           </div>
         </form>
