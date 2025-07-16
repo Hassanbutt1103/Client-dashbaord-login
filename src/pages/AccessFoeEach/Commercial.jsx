@@ -52,7 +52,7 @@ const Commercial = () => {
               <YAxis stroke="#cbd5e1" />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Bar dataKey="Sales" fill="#2563eb" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="Sales" fill={COLORS[0]} radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -93,7 +93,7 @@ const Commercial = () => {
             <YAxis stroke="#cbd5e1" />
             <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
             <Legend wrapperStyle={{ color: '#fff' }} />
-            <Line type="monotone" dataKey="Sales" stroke="#10b981" strokeWidth={3} dot={{ r: 5, fill: '#2563eb' }} activeDot={{ r: 8, fill: '#f59e42' }} />
+            <Line type="monotone" dataKey="Sales" stroke={COLORS[1]} strokeWidth={3} dot={{ r: 5, fill: COLORS[0] }} activeDot={{ r: 8, fill: COLORS[2] }} />
           </LineChart>
         </ResponsiveContainer>
     </div>

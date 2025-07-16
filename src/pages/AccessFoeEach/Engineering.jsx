@@ -7,7 +7,8 @@ const gaugeData = [
   { name: 'Uptime', value: gaugeValue },
   { name: 'Down', value: 100 - gaugeValue },
 ];
-const GAUGE_COLORS = ['#10b981', '#334155'];
+const COLORS = ['#2563eb', '#10b981', '#f59e42', '#f43f5e', '#a78bfa', '#fbbf24'];
+const GAUGE_COLORS = [COLORS[1], COLORS[3]];
 
 // Mock data for Line Chart (Project Progress)
 const progressData = [
@@ -28,7 +29,7 @@ const engineerData = [
   { name: 'Diana', Issues: 3, Tasks: 10 },
 ];
 
-const BAR_COLORS = ['#2563eb', '#f59e42'];
+const BAR_COLORS = [COLORS[0], COLORS[2]];
 
 const Engineering = () => {
   return (
@@ -68,7 +69,7 @@ const Engineering = () => {
               <YAxis stroke="#cbd5e1" domain={[0, 100]} />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Line type="monotone" dataKey="Progress" stroke="#2563eb" strokeWidth={3} dot={{ r: 5, fill: '#10b981' }} activeDot={{ r: 8, fill: '#f59e42' }} />
+              <Line type="monotone" dataKey="Progress" stroke={COLORS[0]} strokeWidth={3} dot={{ r: 5, fill: COLORS[1] }} activeDot={{ r: 8, fill: COLORS[2] }} />
             </LineChart>
           </ResponsiveContainer>
         </div>

@@ -32,7 +32,7 @@ const budgetData = [
   { name: 'Other', value: 10 },
 ];
 
-const COLORS = ['#2563eb', '#10b981', '#f59e42', '#f43f5e', '#a78bfa'];
+const COLORS = ['#2563eb', '#10b981', '#f59e42', '#f43f5e', '#a78bfa', '#fbbf24'];
 
 const Financial = () => {
   return (
@@ -48,8 +48,8 @@ const Financial = () => {
               <YAxis stroke="#cbd5e1" />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Bar dataKey="Revenue" fill="#2563eb" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="Expenses" fill="#f43f5e" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="Revenue" fill={COLORS[0]} radius={[6, 6, 0, 0]} />
+              <Bar dataKey="Expenses" fill={COLORS[3]} radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -91,7 +91,7 @@ const Financial = () => {
             <YAxis stroke="#cbd5e1" />
             <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
             <Legend wrapperStyle={{ color: '#fff' }} />
-            <Line type="monotone" dataKey="Profit" stroke="#10b981" strokeWidth={3} dot={{ r: 5, fill: '#2563eb' }} activeDot={{ r: 8, fill: '#f59e42' }} />
+            <Line type="monotone" dataKey="Profit" stroke={COLORS[1]} strokeWidth={3} dot={{ r: 5, fill: COLORS[0] }} activeDot={{ r: 8, fill: COLORS[2] }} />
           </LineChart>
         </ResponsiveContainer>
       </div>

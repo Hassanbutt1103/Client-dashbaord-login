@@ -18,7 +18,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     navigate('/');
   };
   return (
-    <div className={`h-screen backdrop-blur-2xl border-r border-white/10 shadow-2xl flex flex-col transition-all duration-300 ${collapsed ? 'w-20' : 'w-72'} relative z-20`} style={{ backgroundColor: '#1a2a33' }}> 
+    <div className={`fixed top-0 left-0 min-h-screen h-full backdrop-blur-2xl border-r border-white/10 shadow-2xl flex flex-col transition-all duration-300 ${collapsed ? 'w-20' : 'w-72'} z-20 overflow-y-auto bg-[#1a2a33]`}>
       {/* Logo/Avatar */}
       <div className={`flex items-center border-b border-white/10 p-6 pb-2 transition-all duration-300 ${collapsed ? 'justify-center' : 'gap-3'}`}>
         {!collapsed && (

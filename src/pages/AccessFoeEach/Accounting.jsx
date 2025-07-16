@@ -33,7 +33,7 @@ const transactions = [
   { date: '2024-07-06', description: 'Consulting Income', amount: 2000, type: 'Credit' },
 ];
 
-const COLORS = ['#2563eb', '#f43f5e'];
+const COLORS = ['#2563eb', '#10b981', '#f59e42', '#f43f5e', '#a78bfa', '#fbbf24'];
 
 const Accounting = () => {
   return (
@@ -49,8 +49,8 @@ const Accounting = () => {
               <YAxis stroke="#cbd5e1" />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Bar dataKey="Assets" stackId="a" fill="#2563eb" radius={[6, 6, 0, 0]} />
-              <Bar dataKey="Liabilities" stackId="a" fill="#f43f5e" radius={[6, 6, 0, 0]} />
+              <Bar dataKey="Assets" stackId="a" fill={COLORS[0]} radius={[6, 6, 0, 0]} />
+              <Bar dataKey="Liabilities" stackId="a" fill={COLORS[1]} radius={[6, 6, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -65,7 +65,7 @@ const Accounting = () => {
               <YAxis stroke="#cbd5e1" />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Area type="monotone" dataKey="CashFlow" stroke="#10b981" fill="#10b981" fillOpacity={0.3} strokeWidth={3} />
+              <Area type="monotone" dataKey="CashFlow" stroke={COLORS[2]} fill={COLORS[2]} fillOpacity={0.3} strokeWidth={3} />
             </AreaChart>
           </ResponsiveContainer>
         </div>

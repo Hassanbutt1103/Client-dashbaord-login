@@ -39,7 +39,7 @@ const Overview = () => {
               <YAxis stroke="#cbd5e1" />
               <Tooltip contentStyle={{ background: '#232b3a', border: '1px solid #334155', color: '#fff' }} labelStyle={{ color: '#fff' }} itemStyle={{ color: '#fff' }} />
               <Legend wrapperStyle={{ color: '#fff' }} />
-              <Line type="monotone" dataKey="users" stroke="#2563eb" strokeWidth={3} dot={{ r: 5, fill: '#10b981' }} activeDot={{ r: 8, fill: '#f59e42' }} />
+              <Line type="monotone" dataKey="users" stroke={COLORS[0]} strokeWidth={3} dot={{ r: 5, fill: COLORS[1] }} activeDot={{ r: 8, fill: COLORS[2] }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
