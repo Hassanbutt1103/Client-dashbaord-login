@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
-import Layout from './pages/Layout';
-import Overview from './pages/Overview';
-import Financial from './pages/Financial';
-import Accounting from './pages/Accounting';
-import Engineering from './pages/Engineering';
-import Commercial from './pages/Commercial';
+import Layout from './pages/AccessFoeEach/Layout';
+import Overview from './pages/AccessFoeEach/Overview';
+import Financial from './pages/AccessFoeEach/Financial';
+import Accounting from './pages/AccessFoeEach/Accounting';
+import Engineering from './pages/AccessFoeEach/Engineering';
+import Commercial from './pages/AccessFoeEach/Commercial';
 
 const App = () => {
   return (

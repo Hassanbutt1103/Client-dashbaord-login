@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBars, FaChartPie, FaMoneyBill, FaCalculator, FaCogs, FaBuilding, FaSignOutAlt } from 'react-icons/fa';
 import { useNavigate, NavLink } from 'react-router-dom';
-import novaLogo from '../assets/Nova Logo VP.png';
+import novaLogo from '../../assets/Nova Logo VP.png';
 
 const navLinks = [
   { name: 'General Overview', icon: <FaChartPie className="text-white" />, path: '/overview' },
